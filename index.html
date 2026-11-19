@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1b">
+  <meta name="description" content="Gabriel Digital Solutions builds modern, professional websites that help businesses stand out online.">
+  <title>Gabriel Digital Solutions | Build. Grow. Stand Out.</title>
+  <style>
+    :root{--bg:#070b16;--panel:#0d1425;--panel2:#101b31;--blue:#2585ff;--cyan:#54c8ff;--white:#f5f8ff;--muted:#a8b4c9;--line:rgba(160,190,230,.15)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,11,22,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.2px}.mark{width:39px;height:39px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),#1746a2);box-shadow:0 8px 28px #1268db55;font-size:19px}
+    .brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:2px;font-weight:600}
+    .links{display:flex;align-items:center;gap:25px;color:#c5cee0;font-size:13px}.links a:hover{color:white}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 19px;border-radius:10px;background:linear-gradient(135deg,var(--blue),#1764d7);font-weight:750;font-size:14px;box-shadow:0 10px 28px #1675ef35;transition:.2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.1)}.btn.outline{background:transparent;border:1px solid #397ed3;box-shadow:none}
+    .hero{padding:92px 0 82px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:#1268ff20;filter:blur(90px);right:-100px;top:-140px;pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center;position:relative}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:#8ecaff;background:#102345;border:1px solid #1d4b83;padding:7px 12px;border-radius:99px;font-size:11px;letter-spacing:1.3px;text-transform:uppercase;font-weight:800}
+    .dot{width:7px;height:7px;background:#55baff;border-radius:50%;box-shadow:0 0 12px #55baff}
+    h1{font-size:clamp(42px,6vw,70px);line-height:1.04;letter-spacing:-2.5px;margin:23px 0 20px}h1 span{background:linear-gradient(90deg,#fff,#65baff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{color:var(--muted);font-size:17px;max-width:590px;margin:0 0 29px}.actions{display:flex;gap:13px;flex-wrap:wrap}
+    .hero-card{padding:25px;border:1px solid #25446d;background:linear-gradient(145deg,#142744dd,#0b1222);border-radius:22px;box-shadow:0 28px 80px #0008;transform:rotate(1deg)}
+    .window{height:26px;display:flex;gap:6px;align-items:center;border-bottom:1px solid var(--line);margin:-4px 0 22px}.window i{width:7px;height:7px;border-radius:50%;background:#54708f}
+    .mock-title{font-size:12px;color:#a9bdd8;margin-bottom:12px}.mock-head{font-size:25px;line-height:1.15;font-weight:800;max-width:260px}.mock-head span{color:#60baff}
+    .mock-lines{display:grid;gap:8px;margin:18px 0}.mock-lines i{height:6px;border-radius:9px;background:#243b5b}.mock-lines i:nth-child(1){width:90%}.mock-lines i:nth-child(2){width:70%}.mock-lines i:nth-child(3){width:48%}
+    .mock-btn{width:112px;height:28px;border-radius:7px;background:linear-gradient(90deg,#2384ff,#1456c0);margin-top:17px}
+    .mock-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:24px}.mock-stats div{padding:13px 8px;background:#0a1426;border:1px solid var(--line);border-radius:10px}.mock-stats b{display:block;color:#73bdff;font-size:17px}.mock-stats small{font-size:9px;color:#91a4bf}
+    section{padding:76px 0}.section-kicker{color:#65baff;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.section-title{font-size:clamp(29px,4vw,42px);line-height:1.15;margin:10px 0 12px;letter-spacing:-1px}.section-desc{color:var(--muted);max-width:650px;margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:32px}.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:24px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#326db0}
+    .icon{width:43px;height:43px;display:grid;place-items:center;background:#102b50;border:1px solid #1b4a80;border-radius:12px;color:#75bdff;font-size:20px}
+    .card h3{font-size:18px;margin:17px 0 7px}.card p{font-size:14px;color:var(--muted);margin:0}
+    .portfolio{display:grid;grid-template-columns:repeat(2,1fr);gap:17px;margin-top:30px}.project{min-height:190px;border-radius:17px;padding:25px;background:linear-gradient(135deg,#142846,#0c1424);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between}.project:nth-child(2){background:linear-gradient(135deg,#182b3b,#101722)}.project .tag{font-size:10px;letter-spacing:1.3px;color:#7fc4ff;text-transform:uppercase}.project h3{font-size:23px;margin:10px 0 3px}.project p{color:var(--muted);font-size:13px;margin:0}.project small{color:#a8c9ef;margin-top:20px}
+    .pricing{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}.price-card{padding:27px;border-radius:18px;background:var(--panel);border:1px solid var(--line)}.price-card.featured{border-color:#287ce2;background:linear-gradient(150deg,#122846,#0d1425)}.price{font-size:34px;font-weight:850;margin:13px 0}.price span{font-size:13px;color:var(--muted);font-weight:500}.price-card ul{padding-left:18px;color:var(--muted);font-size:14px}.price-card li{margin:8px 0}
+    .cta{padding:42px;border-radius:22px;background:radial-gradient(circle at 90% 10%,#1c5eaa66,transparent 35%),linear-gradient(120deg,#102443,#0c1424);border:1px solid #28578c;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:0 0 8px}.cta p{color:var(--muted);margin:0}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:#92a2ba;font-size:12px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    @media(max-width:800px){.links{display:none}.hero{padding:65px 0}.hero-grid{grid-template-columns:1fr;gap:38px}.hero-card{max-width:470px}.cards{grid-template-columns:1fr}.portfolio,.pricing{grid-template-columns:1fr}.cta{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="brand" href="#home"><span class="mark">G</span><span>GABRIEL DIGITAL<small>SOLUTIONS</small></span></a>
+  <div class="links"><a href="#services">Services</a><a href="#work">Our work</a><a href="#pricing">Pricing</a><a href="#about">About</a></div>
+  <a class="btn" href="https://wa.me/2347075862693">Let's talk ↗</a>
+</nav></div></header>
+<main>
+  <section class="hero" id="home"><div class="wrap hero-grid">
+    <div><div class="eyebrow"><span class="dot"></span> Websites that work for your business</div>
+      <h1>Build your brand.<br><span>Grow online.</span></h1>
+      <p class="lead">We create clean, modern and professional websites that help businesses make a strong first impression, connect with customers and stand out online.</p>
+      <div class="actions"><a class="btn" href="https://wa.me/2347075862693?text=Hello%20Gabriel%20Digital%20Solutions%2C%20I%27m%20interested%20in%20a%20website.">Start a project ↗</a><a class="btn outline" href="#work">Explore our work</a></div>
+    </div>
+    <div class="hero-card"><div class="window"><i></i><i></i><i></i></div><div class="mock-title">YOUR BUSINESS, ONLINE</div><div class="mock-head">Make your first impression <span>count.</span></div><div class="mock-lines"><i></i><i></i><i></i></div><div class="mock-btn"></div><div class="mock-stats"><div><b>01</b><small>Stand out</small></div><div><b>02</b><small>Get noticed</small></div><div><b>03</b><small>Grow</small></div></div></div>
+  </div></section>
+  <section id="services"><div class="wrap"><div class="section-kicker">What we do</div><h2 class="section-title">Digital solutions for growing businesses.</h2><p class="section-desc">A professional online presence should be clear, useful and easy for your customers to access.</p>
+    <div class="cards">
+      <article class="card"><div class="icon">✦</div><h3>Website Design</h3><p>Modern, mobile-friendly websites designed to present your business professionally and make it easy for customers to reach you.</p></article>
+      <article class="card"><div class="icon">⌖</div><h3>Online Business Presence</h3><p>Help setting up and improving your business information online, including guidance with Google Business Profile.</p></article>
+      <article class="card"><div class="icon">↗</div><h3>Website Updates</h3><p>Need to change text, services, photos or contact details? We can help keep your website up to date.</p></article>
+    </div>
+  </div></section>
+  <section id="work"><div class="wrap"><div class="section-kicker">Selected projects</div><h2 class="section-title">Work we're proud to build.</h2><p class="section-desc">A growing collection of website projects and demos created for local businesses.</p>
+    <div class="portfolio">
+      <article class="project"><div><div class="tag">Food • Catering</div><h3>CHOW_BYAIZE KITCHEN</h3><p>Website concept for a catering and culinary business.</p></div><small>Website design project</small></article>
+      <article class="project"><div><div class="tag">Grooming • Barbershop</div><h3>Barbershop website concepts</h3><p>Clean, bold layouts to showcase services and make booking easier.</p></div><small>Website design concepts</small></article>
+    </div>
+  </div></section>
+  <section id="pricing"><div class="wrap"><div class="section-kicker">Straightforward pricing</div><h2 class="section-title">A website that fits your next step.</h2><p class="section-desc">Choose a starting package. Final pricing depends on the pages, features and content your business needs.</p>
+    <div class="pricing">
+      <article class="price-card"><div class="section-kicker">Starter</div><h3>Business Website</h3><div class="price">₦30,000 <span>/ starting price</span></div><ul><li>Professional website design</li><li>Mobile-friendly layout</li><li>Business information and contact details</li><li>WhatsApp contact link</li></ul><a class="btn outline" href="https://wa.me/2347075862693?text=Hello%2C%20I%27m%20interested%20in%20the%20Starter%20website%20package.">Ask about Starter</a></article>
+      <article class="price-card featured"><div class="section-kicker">Enhanced</div><h3>Business Website Plus</h3><div class="price">₦50,000 <span>/ starting price</span></div><ul><li>Everything in the Starter package</li><li>More tailored sections and presentation</li><li>Extra help connecting your business online</li><li>Project scope agreed before work begins</li></ul><a class="btn" href="https://wa.me/2347075862693?text=Hello%2C%20I%27m%20interested%20in%20the%20Enhanced%20website%20package.">Ask about Enhanced</a></article>
+    </div>
+  </div></section>
+  <section id="about"><div class="wrap"><div class="section-kicker">Why work with us</div><h2 class="section-title">Professional work. Clear communication.</h2><p class="section-desc">Gabriel Digital Solutions helps small businesses and growing brands take their next step online with practical, polished website experiences. We keep the process simple: understand your business, agree on what you need, then build it.</p></div></section>
+  <section><div class="wrap"><div class="cta"><div><h2>Ready to take your business online?</h2><p>Tell us what you do. Let's create a website that helps your business stand out.</p></div><a class="btn" href="https://wa.me/2347075862693?text=Hello%20Gabriel%20Digital%20Solutions%2C%20I%27d%20like%20to%20discuss%20a%20website.">Chat on WhatsApp ↗</a></div></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 Gabriel Digital Solutions. All rights reserved.</span><span><a href="mailto:sundayg31p@gmail.com">sundayg31p@gmail.com</a> · <a href="https://wa.me/2347075862693">WhatsApp: 0707 586 2693</a></span></div></footer>
+</body>
+</html>
